@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de preguntas</title>
+    <link rel="stylesheet" href="diados.css">
+</head>
+<body>
+    <div class="body">
+<div class="container">
+    <div>
+        <label for="nombre">¿Cuál es su nombre?</label>
+        <input class="texto" type="text" id="nombre">
+    </div>
+    <div>
+        <label for="edad">¿Cuál es su edad?</label>
+        <input class="texto" type="text" id="edad" >
+    </div>
+    <div>
+        <label for="lenguaje">¿Qué lenguaje de programación 
+                               estás estudiando?</label>
+        <input class="texto" type="text" id="lenguaje" >
+    </div>
+    <div >
+        <label for="ciudad">¿De que ciudad eres?</label>
+        <input class="texto" type="text" id="ciudad">
+    </div>
+</div>
+<div class="salida">
+    <button class="envio" onclick="mostrarRespuestas()">Enviar</button>
+    <div class="output" id="output"></div>
+    <div  class="pregunta" id="pregunta"></div>
+    <div>
+        <input class="texto" type="text" id="respuestaInput" placeholder="1 para Si , 2 para No">
+        <button class="responder" onclick="procesarRespuesta()">Responder</button>
+    </div>
+    <div class="texto" id="respuesta"></div>
+</div>
+    <script src="diados.js"></script>
+</div>
+</body>
+</html>
