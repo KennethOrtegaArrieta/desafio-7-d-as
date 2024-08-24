@@ -1,105 +1,48 @@
-/*const entrada = parseInt(prompt("Digite la operacion: '1' Suma, '2' Resta, '3' Multiplicacion, '4' Division, '0' Salir"));
-let num1, num2, resultado;
-
-while (entrada !== 0) {
-    switch (entrada) {
-        case 1:
-            num1 = parseFloat(prompt("Digite el primer numero"));
-            num2 = parseFloat(prompt("Digite el segundo numero"));
-            Suma();
-            break;
-        case 2:
-            num1 = parseFloat(prompt("Digite el primer numero"));
-            num2 = parseFloat(prompt("Digite el segundo numero"));
-            Resta();
-            break;
-        case 3:
-            num1 = parseFloat(prompt("Digite el primer numero"));
-            num2 = parseFloat(prompt("Digite el segundo numero"));
-            Multiplicacion();
-            break;
-        case 4:
-            num1 = parseFloat(prompt("Digite el primer numero"));
-            num2 = parseFloat(prompt("Digite el segundo numero"));
-            Division();
-            break;
-        default:
-            alert("Entrada no valida");
-            break;
-    }
-    entrada = parseInt(prompt("Digite la operacion: '1' Suma, '2' Resta, '3' Multiplicacion, '4' Division, '0' Salir"));
-}
-
 function Suma() {
-    resultado = num1 + num2;
-    imprimirResultado();
+    return Number(num1)+Number(num2);
 }
 
 function Resta() {
-    resultado = num1 - num2;
-    imprimirResultado();
+    return Number(num1)-Number(num2);
 }
 
 function Multiplicacion() {
-    resultado = num1 * num2;
-    imprimirResultado();
+    return Number(num1)*Number(num2);
 }
 
 function Division() {
-    resultado = num1 / num2;
-    imprimirResultado();
+    return Number(num1)/Number(num2);
 }
-
-function imprimirResultado() {
-    console.log(`El resultado es: ${resultado}`);
-}*/
-function suma(valor1, valor2) {
-    return Number(valor1) + Number(valor2);
+let num1, num2;
+let operacion="";
+do {
+    operacion = prompt("Digite la operacion: '+' Suma, '-' Resta, '*' Multiplicacion, '/' Division, 0' Salir'");
+while (operacion != "+"&&operacion!="-"&& operacion!="*"&&operacion!="/"&&operacion!="Salir" );{
 }
-
-function resta(valor1, valor2) {
-    return Number(valor1) - Number(valor2);
+alert("Operacion no reconocida");
+operacion = prompt("Digite la operacion: '+' Suma, '-' Resta, '*' Multiplicacion, '/' Division, 0' Salir'");
+if (operacion==="Salir") {
+    break;
 }
-
-function multiplicacion(valor1, valor2) {
-    return Number(valor1) * Number(valor2);
-}
-
-function division(valor1, valor2) {
-    return Number(valor1) / Number(valor2);
-}
-
-let valor1;
-let valor2;
-let operacion = "";
-
-do {  //usando 'do...while', ya que la primera vez siempre vamos a entrar
-    
-    operacion = prompt(`¿Qué operación quieres realizar? Responde 'suma', 'resta', 'multiplicación', 'división' o 'salir'.`);
-    while (operacion != "suma" && operacion != "resta" && operacion != "multiplicación" && operacion != "división" && operacion != "salir") {  //mientras el texto leído sea diferente de "suma", "resta", "multiplicación", "división" y "salir", mostrar que no fue reconocido y preguntar nuevamente
-        alert(`¡Operación no reconocida!`);
-        operacion = prompt(`¿Qué operación quieres realizar? Responde 'suma', 'resta', 'multiplicación', 'división' o 'salir'.`);
-    }
-    
-    if (operacion === "salir") {  //si el texto leído es "salir", salir del loop y de la calculadora
+num1 = prompt("Digite el primer numero");
+num2 = prompt("Digite el segundo numero");
+switch (operacion) {
+    case "+":
+        alert(`El resultade de ${operacion} es ${Suma(num1,num2)} `);
         break;
-    }
-    
-    valor1 = prompt(`Ingresa el primer valor:`);
-    valor2 = prompt(`Ingresa el segundo valor:`);
-    switch (operacion) {
-        case 'suma':
-            alert(`El resultado de la ${operacion} es ${suma(valor1, valor2)}`);
-            break;
-        case 'resta':
-            alert(`El resultado de la ${operacion} es ${resta(valor1, valor2)}`);
-            break;
-        case 'multiplicación':
-            alert(`El resultado de la ${operacion} es ${multiplicacion(valor1, valor2)}`);
-            break;
-        case 'división':
-            alert(`El resultado de la ${operacion} es ${division(valor1, valor2)}`);
-            break;
-    }
-} while (operacion === "suma" || operacion === "resta" || operacion === "multiplicación" || operacion === "división")
+    case "-":
+        alert(`El resultade de ${operacion} es ${Resta(num1,num2)} `);
+        break;
+    case "*":
+        alert(`El resultade de ${operacion} es ${Multiplicacion(num1,num2)} `);
+        break;
+    case "/":
+        alert(`El resultade de ${operacion} es ${Division(num1,num2)} `);
+        break;
+
+    default:
+        break;
+}
+}
+while(operacion === "+" || operacion === "-" || operacion === "*" || operacion === "/");
 alert(`¡Hasta la próxima!`);

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+:root{
+    --color-1:#072227;
+    --color-2:#35858B;
+    --color-3:#4FBDBA;
+    --color-4:#AEFEFF;
+    --color-5:#2C394B;
+    --letraTitulo:"DM Serif Text", serif;
+    --numeros:"New Amsterdam", sans-serif;
+}
+body{
+  background-color: var(--color-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.calculadora{
+    background-color: var(--color-2);
+    font-family: var(--numeros);
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.botones{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr );
+    gap:10px;
+}
+.display{
+    width: 94%;
+    height: 50px;
+    background-color: var(--color-4);
+    border-radius: 10px;
+    text-align: right;
+    text-decoration: underline;
+    color: var(--color-5);
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-family: var(--numeros);
+}
+.boton{
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.botonOperador{
+    background-color:crimson;
+    border-color:var(--color-5);
+    border-radius: 5px;
+}
+.botonBorrar{
+background-color: var(--color-5);
+border-color: var(--color-4);
+color: var(--color-4);
+border-radius: 5px;
+}

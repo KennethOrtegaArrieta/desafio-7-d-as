@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>calculadora</title>
+    <link rel="stylesheet" href="diasiete.css">
 </head>
+
 <body>
-    
-    <script src="diasiete.js"></script>
+    <div class="calculadora">
+       
+        <div id="display" class="display">0</div>
+        <div class="botones">
+            
+            <button class="botonBorrar" onclick="borrar()">Borrar</button>
+            <button class="boton" onclick="calcularRaiz()">√</button>
+            <button class="boton" onclick="calcularPotencia()">^</button>
+            <button class="boton" onclick="calcularPorcentaje()">%</button>
+
+            <button class="boton" onclick="agregarNumero('7')">7</button>
+            <button class="boton" onclick="agregarNumero('8')">8</button>
+            <button class="boton" onclick="agregarNumero('9')">9</button>
+            <button class="boton" onclick="agregarOperador('/')">/</button>
+
+            <button class="boton" onclick="agregarNumero('4')">4</button>
+            <button class="boton" onclick="agregarNumero('5')">5</button>
+            <button class="boton" onclick="agregarNumero('6')">6</button>
+            <button class="boton" onclick="agregarOperador('*')">*</button>
+
+            <button class="boton" onclick="agregarNumero('1')">1</button>
+            <button class="boton" onclick="agregarNumero('2')">2</button>
+            <button class="boton" onclick="agregarNumero('3')">3</button>
+            <button class="boton" onclick="agregarOperador('-')">-</button>
+
+            <button class="boton" onclick="agregarNumero('0')">0</button>
+            <button class="boton" onclick="agregarNumero('.')">.</button>
+            <button class="botonOperador" onclick="calcular()">=</button>
+            <button class="boton" onclick="agregarOperador('+')">+</button>
+        </div>
+    </div>
+     <script src="calculadora.js"></script>
 </body>
 </html>
